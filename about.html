@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford University | Learn. Build. Lead.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="progressBar"></div>
+
+<section class="sub-header">
+
+    <nav>
+        <a href="index.html"><img src="Eduford.jpg" alt="Eduford Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active">ABOUT</a></li>               
+                <li><a href="course.html">COURSE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <h1>About Us</h1>
+
+</section>
+    
+<div class="text-box">
+  <p>Join a new generation of thinkers, creators, and innovators. At Eduford, we don’t just teach — we prepare you to lead in a fast-changing world.</p>
+  <a href="course.html" class="hero-btn">APPLY NOW</a>
+</div>
+
+    </section>
+
+    <section class="about">
+    <div class="row">
+
+        <div class="about-col">
+            <h1>We Are One of the Leading Universities</h1>
+            <p>
+                Eduford University is dedicated to shaping the future through quality education,
+                innovation, and real-world experience. Our mission is to empower students with the
+                skills and confidence needed to succeed in a rapidly evolving world.
+            </p>
+            <p>
+                With a strong focus on practical learning, global exposure, and personal development,
+                we prepare our students to become leaders, creators, and problem-solvers in their
+                chosen fields.
+            </p>
+
+            <a href="course.html" class="hero-btn">Explore Courses</a>
+        </div>
+
+        <div class="about-col">
+            <img src="foundry-library-869061.jpg">
+        </div>
+
+    </div>
+</section>
+
+    <!----- Call To Action -------->
+    <section class="cta">
+        <h1>Enroll in Our Online Courses<br>Learn From Anywhere in the World</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+  
+
+<!----- Footer -------->
+<section class="footer">
+    <h4>About Us</h4>
+        <p>Our university is committed to providing quality education and fostering innovation.<br>Join us to gain skills that will shape your future and open doors worldwide.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by THE MUTE</p>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+    let scrollTop = document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / height) * 100;
+
+    document.getElementById("progressBar").style.width = progress + "%";
+});
+</script>
+
+</body>
+</html>

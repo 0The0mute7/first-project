@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford University | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="progressBar"></div>
+
+    <!-- HEADER -->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="Eduford.jpg" alt="Eduford Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Contact Eduford</h1>
+            <p>We’d love to hear from you. Send us a message and we’ll get back to you promptly!</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+        <div class="contact-top">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Have a question? Need more info about our courses? Contact us below.</p>
+                <div class="info-item">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Lagos, Nigeria</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>michealnwankwo70@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-phone"></i>
+                    <span>+234 810 766 3181</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa fa-clock-o"></i>
+                <span><strong>Office Hours:</strong> - Fri (9am - 5pm)</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fa fa-check-circle"></i>
+                <span>We reply within 24 hours</span>
+            </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="https://formspree.io/f/xwvrdweq" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Full Width Map -->
+        <div class="contact-map-full">
+            <h2>Our Location</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7454839356857!2d3.379205314385445!3d6.524379295287486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4aaf6e67b0f%3A0x3e8b2b7b409e0e42!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1616078160800!5m2!1sen!2sus"
+                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h1>Enroll in Our Online Courses<br>Learn From Anywhere in the World</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Our university is committed to providing quality education and fostering innovation.<br>Join us to gain skills that will shape your future and open doors worldwide.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by THE MUTE</p>
+    </section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+    let scrollTop = document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / height) * 100;
+
+    document.getElementById("progressBar").style.width = progress + "%";
+});
+</script>
+
+<a href="https://wa.me/2348107663181?text=Hello%20I%20am%20interested%20in%20your%20courses" class="whatsapp-float" target="_blank">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

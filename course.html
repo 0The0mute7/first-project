@@ -1,0 +1,149 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford Courses | Learn With Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="progressBar"></div>
+
+<!-- SUB HEADER -->
+<section class="sub-header">
+
+    <nav>
+        <a href="index.html"><img src="Eduford.jpg" alt="Eduford Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="course.html" class="active">COURSE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <h1>Our Courses</h1>
+    <p>Choose a path that fits your passion and build skills that matter in the real world.</p>
+
+
+</section>
+
+<!-- COURSE DETAILS -->
+<section class="course">
+    <h1>Programs We Offer</h1>
+    <p>Choose a path that fits your passion and build skills that matter in the real world.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3><i class="fa fa-code"></i>Web Development</h3>
+            <p>Learn how to build modern websites using HTML, CSS, JavaScript, and frameworks. Perfect for aspiring developers.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>Data Science</h3>
+            <p>Master data analysis, visualization, and machine learning to solve real-world problems using data.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>Business & Management</h3>
+            <p>Develop leadership, strategy, and communication skills needed to succeed in the business world.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MORE COURSES -->
+<section class="course">
+    <h1>Advanced Programs</h1>
+    <p>Take your knowledge further with specialized and career-focused training.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Artificial Intelligence</h3>
+            <p>Explore the future of technology by learning AI concepts, automation, and smart systems.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>Cyber Security</h3>
+            <p>Understand how to protect systems, networks, and data from digital attacks.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>Digital Marketing</h3>
+            <p>Learn how to grow brands online using SEO, social media, and paid advertising strategies.</p>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="row">
+        <div class="stat-box">
+            <h1>10K+</h1>
+            <p>Students</p>
+        </div>
+
+        <div class="stat-box">
+            <h1>120</h1>
+            <p>Courses</p>
+        </div>
+
+        <div class="stat-box">
+            <h1>95%</h1>
+            <p>Success Rate</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h1>Start Your Learning Journey Today</h1>
+    <a href="contact.html" class="hero-btn">APPLY NOW</a>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+    <h4>About Us</h4>
+        <p>Our university is committed to providing quality education and fostering innovation.<br>Join us to gain skills that will shape your future and open doors worldwide.</p>
+
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+
+    <p>Made with <i class="fa fa-heart-o"></i> by THE MUTE</p>
+</section>
+
+<!-- JS -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+    let scrollTop = document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / height) * 100;
+
+    document.getElementById("progressBar").style.width = progress + "%";
+});
+</script>
+</body>
+</html>

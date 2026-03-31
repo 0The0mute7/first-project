@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford Blog | Insights & Stories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="progressBar"></div>
+
+<!-- HEADER -->
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="Eduford.jpg" alt="Eduford Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="course.html">COURSE</a></li>
+                <li><a href="blog.html" class="active">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <h1>Our Blog</h1>
+</section>
+
+<!-- BLOG CONTENT -->
+<section class="blog">
+    <div class="row">
+
+        <div class="blog-left">
+
+            <div class="blog-post">
+                <img src="">
+                <h2>Top 10 Skills Every Student Should Learn in 2026</h2>
+                <p>In today’s fast-changing world, students need more than just academic knowledge. Skills like communication, problem-solving, and digital literacy are essential to stay ahead.</p>
+                <a href="#" class="hero-btn">Read More</a>
+            </div>
+
+            <div class="blog-post">
+                <img src="Playground.jpg">
+                <h2>How to Balance Study and Social Life</h2>
+                <p>University life is not just about books. Learn how to manage your time effectively while enjoying friendships and campus experiences.</p>
+                <a href="#" class="hero-btn">Read More</a>
+            </div>
+
+            <div class="blog-post">
+                <img src="World-class.jpg">
+                <h2>Why Practical Learning Matters</h2>
+                <p>Hands-on experience prepares students for real-world challenges and gives them an edge in their careers.</p>
+                <a href="#" class="hero-btn">Read More</a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="blog-right">
+            <h3>Categories</h3>
+
+            <div>
+                <span>Technology</span>
+                <span>21</span>
+                <a href="#" class="hero-btn">Read More</a>
+            </div>
+            <div>
+                <span>Student Life</span>
+                <span>15</span>
+                <a href="#" class="hero-btn">Read More</a>
+
+            </div>
+            <div>
+                <span>Career Tips</span>
+                <span>12</span>
+                <a href="#" class="hero-btn">Read More</a>
+            </div>
+            <div>
+                <span>Education</span>
+                <span>20</span>
+                 <a href="#" class="hero-btn">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+    <h4>About Us</h4>
+        <p>Our university is committed to providing quality education and fostering innovation.<br>Join us to gain skills that will shape your future and open doors worldwide.</p>
+
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+
+    <p>Made with <i class="fa fa-heart-o"></i> by THE MUTE</p>
+</section>
+
+<!-- SCRIPT -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+    let scrollTop = document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / height) * 100;
+
+    document.getElementById("progressBar").style.width = progress + "%";
+});
+</script>
+
+</body>
+</html>
