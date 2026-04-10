@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Graduation | Eduford</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="colorful-eduford-removebg-preview.png" alt="Eduford Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="course.html" class="active">COURSE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    
+    <div class="sub-header-text">                                    
+    <h1>Post Graduate Studies</h1>
+    <p>Advanced specialization and research for industry leaders.</p>
+    </div>  
+
+</section>
+
+<section class="course">
+
+    <h1>Advanced Expertise</h1>
+    <p>Our postgraduate programs are designed to deepen your mastery and provide opportunities for high-level research.</p>
+
+    <div class="row">
+
+        <div class="course-col">
+            <h3><i class="fa fa-file-text-o"></i> Admissions</h3>
+            <p>
+                ✔ Undergraduate Degree<br>
+                ✔ Professional Experience<br>
+                ✔ Research Proposal<br>
+                ✔ Letters of Recommendation
+            </p>
+        </div>
+
+        <div class="course-col">
+            <h3><i class="fa fa-lightbulb-o"></i> Specialized Focus</h3>
+            <p>
+                ✔ Advanced Strategic Management<br>
+                ✔ Specialized Research Thesis<br>
+                ✔ Executive Leadership<br>
+                ✔ Global Market Analysis</p>
+        </div>
+
+        <div class="course-col">
+            <h3><i class="fa fa-black-tie"></i> Executive Career</h3>
+            <p>✔ Senior Executive / CEO<br>
+            ✔ Academic Researcher<br>
+            ✔ Industry Consultant<br>
+            ✔ Policy Advisor</p>
+            </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h1>Elevate Your Professional Standing</h1>
+    <a href="contact.html" class="hero-btn">ENROLL IN MASTERS</a>
+</section>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>We help students build real-world skills in tech, business, and digital careers.</p>
+
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+
+    <p>Made with <i class="fa fa-heart-o"></i> by THE MUTE</p>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
