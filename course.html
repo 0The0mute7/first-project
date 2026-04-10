@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 <section class="sub-header">
 
     <nav>
-        <a href="index.html"><img src="Eduford.jpg" alt="Eduford Logo"></a>
+        <a href="index.html"><img src="colorful-eduford-removebg-preview.png" alt="Eduford Logo"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
@@ -31,9 +31,10 @@
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
 
+    <div class="sub-header-text">
     <h1>Our Courses</h1>
     <p>Choose a path that fits your passion and build skills that matter in the real world.</p>
-
+    </div>
 
 </section>
 
@@ -44,18 +45,21 @@
 
     <div class="row">
         <div class="course-col">
-            <h3><i class="fa fa-code"></i>Web Development</h3>
-            <p>Learn how to build modern websites using HTML, CSS, JavaScript, and frameworks. Perfect for aspiring developers.</p>
+            <h3><i class="fa fa-code"></i> Web Development</h3>
+            <p>Learn how to build modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+            <a href="web-development.html" class="hero-btn">View Details</a>
         </div>
 
         <div class="course-col">
-            <h3>Data Science</h3>
-            <p>Master data analysis, visualization, and machine learning to solve real-world problems using data.</p>
+            <h3><i class="fa fa-database"></i> Data Science</h3>
+            <p>Master data analysis, visualization, and machine learning.</p>
+            <a href="data-science.html" class="hero-btn">View Details</a>
         </div>
 
         <div class="course-col">
-            <h3>Business & Management</h3>
-            <p>Develop leadership, strategy, and communication skills needed to succeed in the business world.</p>
+            <h3><i class="fa fa-briefcase"></i> Business & Management</h3>
+            <p>Develop leadership and strategy skills for business success.</p>
+            <a href="business-management.html" class="hero-btn">View Details</a>
         </div>
     </div>
 </section>
@@ -63,42 +67,47 @@
 <!-- MORE COURSES -->
 <section class="course">
     <h1>Advanced Programs</h1>
-    <p>Take your knowledge further with specialized and career-focused training.</p>
+    <p>Take your knowledge further with specialized training.</p>
 
     <div class="row">
         <div class="course-col">
-            <h3>Artificial Intelligence</h3>
-            <p>Explore the future of technology by learning AI concepts, automation, and smart systems.</p>
+            <h3><i class="fa fa-cogs"></i> Artificial Intelligence</h3>
+            <p>Learn AI, automation, and smart systems.</p>
+            <a href="artificial-intelligence.html" class="hero-btn">View Details</a>
         </div>
 
         <div class="course-col">
-            <h3>Cyber Security</h3>
-            <p>Understand how to protect systems, networks, and data from digital attacks.</p>
+            <h3><i class="fa fa-shield"></i> Cyber Security</h3>
+            <p>Protect systems, networks, and data from attacks.</p>
+            <a href="cyber-security.html" class="hero-btn">View Details</a>
         </div>
 
         <div class="course-col">
-            <h3>Digital Marketing</h3>
-            <p>Learn how to grow brands online using SEO, social media, and paid advertising strategies.</p>
+            <h3><i class="fa fa-bullhorn"></i> Digital Marketing</h3>
+            <p>Grow brands using SEO, ads, and social media.</p>
+            <a href="digital-marketing.html" class="hero-btn">View Details</a>
         </div>
     </div>
 </section>
 
 <section class="stats">
     <div class="row">
+
         <div class="stat-box">
-            <h1>10K+</h1>
+            <h1 class="count" data-target="10000">0</h1>
             <p>Students</p>
         </div>
 
         <div class="stat-box">
-            <h1>120</h1>
+            <h1 class="count" data-target="120">0</h1>
             <p>Courses</p>
         </div>
 
         <div class="stat-box">
-            <h1>95%</h1>
+            <h1 class="count" data-target="95">0</h1>
             <p>Success Rate</p>
         </div>
+
     </div>
 </section>
 
@@ -145,5 +154,62 @@ window.addEventListener("scroll", function(){
     document.getElementById("progressBar").style.width = progress + "%";
 });
 </script>
+
+<script>
+const counters = document.querySelectorAll('.count');
+
+const startCounting = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let current = 0;
+
+    const speed = Math.max(10, Math.floor(target / 100));
+
+    counter.innerText = "0";
+
+    const update = () => {
+        current += Math.ceil(target / 100);
+
+        if (current < target) {
+            counter.innerText = current;
+            setTimeout(update, 20);
+        } else {
+            if (target >= 1000) {
+                counter.innerText = (target / 1000).toFixed(0) + "K+";
+            } else {
+                counter.innerText = target;
+            }
+        }
+    };
+
+    update();
+};
+
+// 🔥 Observer (RESETS when leaving screen)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const counters = entry.target.querySelectorAll('.count');
+
+        if (entry.isIntersecting) {
+            // 👉 start counting when visible
+            counters.forEach(counter => {
+                startCounting(counter);
+            });
+        } else {
+            // 👉 reset when out of view
+            counters.forEach(counter => {
+                counter.innerText = "0";
+            });
+        }
+    });
+}, {
+    threshold: 0.4
+});
+
+// attach
+document.querySelectorAll('.stats').forEach(section => {
+    observer.observe(section);
+});
+</script>
+
 </body>
 </html>
