@@ -13,7 +13,6 @@
 
     <div id="progressBar"></div>
 
-<!-- HEADER -->
 <section class="sub-header">
     <nav>
         <a href="index.html"><img src="colorful-eduford-removebg-preview.png" alt="Eduford Logo"></a>
@@ -30,98 +29,113 @@
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
     
-     <div class="sub-header-text">
-    <h1>Our Blog</h1>
-    <p>Insights, stories and tips to inspire your learning journey.</p>
+    <div class="sub-header-text">
+        <h1>Our Blog</h1>
+        <p>Insights, stories and tips to inspire your learning journey.</p>
     </div>
-
 </section>
 
-<!-- BLOG CONTENT -->
 <section class="blog">
     <div class="row">
 
         <div class="blog-left">
 
             <div class="blog-post">
-                <img src="">
+                <img src="solutions-collaboration-testimonial.jpg">
                 <h2>Top 10 Skills Every Student Should Learn in 2026</h2>
                 <p>In today’s fast-changing world, students need more than just academic knowledge. Skills like communication, problem-solving, and digital literacy are essential to stay ahead.</p>
-                <a href="#" class="hero-btn">Read More</a>
             </div>
 
             <div class="blog-post">
                 <img src="Playground.jpg">
                 <h2>How to Balance Study and Social Life</h2>
                 <p>University life is not just about books. Learn how to manage your time effectively while enjoying friendships and campus experiences.</p>
-                <a href="#" class="hero-btn">Read More</a>
             </div>
 
             <div class="blog-post">
                 <img src="World-class.jpg">
                 <h2>Why Practical Learning Matters</h2>
                 <p>Hands-on experience prepares students for real-world challenges and gives them an edge in their careers.</p>
-                <a href="#" class="hero-btn">Read More</a>
+            </div>
+
+            <div class="comment-box">
+                <h3>Leave a Comment</h3>
+                <form action="https://formspree.io/f/xwvrdweq" method="POST" class="comment-form">
+                    <input type="hidden" name="_subject" value="New Blog Comment">
+                    <input type="hidden" name="_next" value="https://yourusername.github.io/repo-name/blog.html">
+                    
+                    <input type="text" name="name" placeholder="Enter Name" required>
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Comment" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                </form>
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="blog-right">
-            <h3>Categories</h3>
+            <h3>Stay Updated</h3>
+            <p>Subscribe to get the latest news and course updates directly in your inbox.</p>
+            
+            <div class="newsletter-box">
+                <form action="https://formspree.io/f/xwvrdweq" method="POST">
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    <input type="hidden" name="_next" value="https://yourusername.github.io/repo-name/blog.html">
+                    
+                    <input type="email" name="email" placeholder="Your Email Address" required 
+                           style="width: 100%; padding: 15px; margin: 15px 0; border: none; outline: none; background: #f0f0f0; border-radius: 10px;">
+                    <button type="submit" class="hero-btn red-btn" 
+                            style="width: 100%; cursor: pointer;">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
 
-            <div>
-                <span>Technology</span>
+            <h3 style="margin-top: 50px;">Course Categories</h3>
+            <div class="blog-right-div" style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee;">
+                <span>Business Analytics</span>
                 <span>21</span>
-                <a href="#" class="hero-btn">Read More</a>
             </div>
-            <div>
-                <span>Student Life</span>
+            <div class="blog-right-div" style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee;">
+                <span>Data Science</span>
                 <span>15</span>
-                <a href="#" class="hero-btn">Read More</a>
+            </div>
+            <div class="blog-right-div" style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee;">
+                <span>Machine Learning</span>
+                <span>8</span>
+            </div>
+            <div class="blog-right-div" style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee;">
+                <span>Computer Science</span>
+                <span>34</span>
+            </div>
 
-            </div>
-            <div>
-                <span>Career Tips</span>
-                <span>12</span>
-                <a href="#" class="hero-btn">Read More</a>
-            </div>
-            <div>
-                <span>Education</span>
-                <span>20</span>
-                 <a href="#" class="hero-btn">Read More</a>
-            </div>
+            <h3 style="margin-top: 50px;">Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 10px;"><a href="course.html" style="text-decoration: none; color: #ff0000; font-size: 14px;">View All Courses</a></li>
+                <li style="margin-bottom: 10px;"><a href="about.html" style="text-decoration: none; color: #ff0000; font-size: 14px;">Admission Process</a></li>
+                <li style="margin-bottom: 10px;"><a href="contact.html" style="text-decoration: none; color: #ff0000; font-size: 14px;">Student Support</a></li>
+            </ul>
         </div>
 
     </div>
 </section>
 
-<!-- FOOTER -->
 <section class="footer">
     <h4>About Us</h4>
-        <p>Our university is committed to providing quality education and fostering innovation.<br>Join us to gain skills that will shape your future and open doors worldwide.</p>
-
+    <p>Our university is committed to providing quality education and fostering innovation.<br>Join us to gain skills that will shape your future and open doors worldwide.</p>
     <div class="icons">
         <i class="fa fa-facebook"></i>
         <i class="fa fa-twitter"></i>
         <i class="fa fa-instagram"></i>
         <i class="fa fa-linkedin"></i>
     </div>
-
-    <p>Made with <i class="fa fa-heart-o"></i> by THE MUTE</p>
+    <p>Made with ❤️ by THE MUTE</p>
 </section>
 
-<!-- SCRIPT -->
 <script>
     var navLinks = document.getElementById("navLinks");
-
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
+    function showMenu(){ navLinks.style.right = "0"; }
+    function hideMenu(){ navLinks.style.right = "-200px"; }
 </script>
 
 <script>
@@ -129,7 +143,6 @@ window.addEventListener("scroll", function(){
     let scrollTop = document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let progress = (scrollTop / height) * 100;
-
     document.getElementById("progressBar").style.width = progress + "%";
 });
 </script>
